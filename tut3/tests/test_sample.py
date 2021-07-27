@@ -15,7 +15,8 @@ def test_add_str():
     assert add("a", "b") == "ab"
 
 
-@pytest.mark.xfail(sys.platform == "linux", reason="dont run on linux")
+# if platform is windows and Exception got raised, okay to ignore.
+@pytest.mark.xfail(sys.platform == "win32", reason="dont run on windows")
 def test_add_list():
     assert add([1], [2]) == [1, 2]
     raise Exception()
