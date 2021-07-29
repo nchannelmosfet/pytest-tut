@@ -1,3 +1,8 @@
+"""
+conftest.py store fixtures shared among all test suites.
+Try to use conftest.py as local as possible, i.e. not in the root to avoid slowing down performance.
+"""
+
 from datetime import datetime
 
 import pytest
